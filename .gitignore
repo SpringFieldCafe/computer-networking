@@ -1,0 +1,100 @@
+# Local agent instructions.
+/AGENTS.md
+
+# Existing homework 3: exclude the entire directory and common naming variants.
+/作业三/
+/作业3/
+/作业 3/
+/作业三*
+/作业3*
+/作业 3*
+/homework3*/
+/homework-3*/
+/homework_3*/
+/hw3*/
+
+# Credentials, environment variables, private keys, and local authentication.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*credentials*
+*secrets*
+*token*
+.ssh/
+.aws/
+.azure/
+.config/
+.netrc
+_netrc
+.npmrc
+.pypirc
+
+# Personal information and private/local working files.
+private/
+personal/
+local/
+个人信息/
+个人资料/
+*学号*
+*姓名*
+*身份证*
+*学生证*
+*通讯录*
+*联系方式*
+*student_id*
+*personal_info*
+*contact_info*
+*.local
+*.local.*
+
+# Network captures and raw records may contain addresses, cookies, or passwords.
+*.pcap
+*.pcapng
+*.cap
+*.har
+*.log
+logs/
+原始记录/
+截图/
+screenshots/
+
+# Generated files, archives, caches, and local editor/OS state.
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.bak
+*.tmp
+*.swp
+*~
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Ignore patterns cannot detect personal information embedded in ordinary files.
+# Review every new file and its contents before staging or publishing.
+
+# Local experiment photos and report with personal information.
+/exp1/figure/
+/exp1/local/
+
+# Course source documents and local experiment artifacts.
+/exp1/doc/
+/exp2/doc/
+/exp2/*.pptx
+/exp2/*.doc
+/exp2/local/
+/exp2/figure/
