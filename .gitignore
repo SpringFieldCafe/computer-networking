@@ -1,6 +1,49 @@
 # Local agent instructions.
 /AGENTS.md
 
+# Homework photos and personal experiment progress stay local.
+/作业二/
+/exp2/操作清单.md
+
+# All figure directories and image files stay local, including future experiments.
+figure/
+figures/
+fig/
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[gG][iI][fF]
+*.[bB][mM][pP]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[wW][eE][bB][pP]
+*.[sS][vV][gG]
+*.[hH][eE][iI][cC]
+*.[aA][vV][iI][fF]
+
+# Course originals, personal reports, and exported documents stay local.
+*.[dD][oO][cC]
+*.[dD][oO][cC][xX]
+*.[pP][pP][tT]
+*.[pP][pP][tT][xX]
+*.[pP][dD][fF]
+*.[xX][lL][sS]
+*.[xX][lL][sS][xX]
+*.[oO][dD][tT]
+*.[oO][dD][sS]
+*.[oO][dD][pP]
+
+# Saved emulator projects and derived network records may contain device details.
+*.topo
+*.vdi
+*.vmdk
+*.vbox
+*.vbox-prev
+*.flash
+records/
+captures/
+analysis/
+
 # Existing homework 3: exclude the entire directory and common naming variants.
 /作业三/
 /作业3/

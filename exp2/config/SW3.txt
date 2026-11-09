@@ -1,0 +1,10 @@
+undo terminal monitor
+system-view
+sysname SW3
+stp disable
+mac-address aging-time 0
+undo mac-address dynamic
+return
+display mac-address
+display mac-address aging-time
+display current-configuration | include ^stp
