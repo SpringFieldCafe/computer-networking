@@ -1,0 +1,45 @@
+
+
+<Huawei>
+undo terminal monitor
+
+Info: Current terminal monitor is off.
+
+<Huawei>
+system-view
+
+Enter system view, return user view with Ctrl+Z.
+
+[Huawei]
+sysname SW3
+
+[SW3]
+stp disable
+
+Warning: The global STP state will be changed. Continue? [Y/N]y
+
+Info: This operation may take a few seconds. Please wait for a moment...done.
+
+[SW3]
+mac-address aging-time 0
+
+[SW3]
+undo mac-address dynamic
+
+[SW3]
+return
+
+<SW3>
+display mac-address
+
+<SW3>
+display mac-address aging-time
+
+  Aging time: 0 seconds
+
+<SW3>
+display current-configuration | include ^stp
+
+stp disable
+
+<SW3>

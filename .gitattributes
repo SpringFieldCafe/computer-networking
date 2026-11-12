@@ -1,0 +1,2 @@
+# Preserve reviewed evidence byte for byte so inventory SHA-256 works on every OS.
+exp2/evidence/** -text
