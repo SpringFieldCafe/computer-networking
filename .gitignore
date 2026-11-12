@@ -141,3 +141,7 @@ Desktop.ini
 /exp2/*.doc
 /exp2/local/
 /exp2/figure/
+
+# Experiment 3 originals, emulator state, and personal evidence stay local.
+/exp3/local/
+/exp3/操作清单.md
