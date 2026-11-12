@@ -130,6 +130,20 @@ Desktop.ini
 # Ignore patterns cannot detect personal information embedded in ordinary files.
 # Review every new file and its contents before staging or publishing.
 
+# Emulator flash contains binary runtime state and historical diagnostics.
+*.efz
+
+# Reviewed public project and capture derivatives (originals stay local).
+!/exp2/pc-assistant/交换机自学习_简化版.topo
+!/exp2/evidence/pcap/Client1-SW1.pcap
+!/exp2/evidence/pcap/Client2-SW1.pcap
+!/exp2/evidence/pcap/Client3-SW2.pcap
+!/exp2/evidence/pcap/Client4-SW3.pcap
+!/exp2/evidence/pcap/Client5-SW3.pcap
+!/exp2/evidence/pcap/SW1-SW2.pcap
+!/exp2/evidence/pcap/SW2-SW3.pcap
+/exp2/pc-assistant/最新一轮.txt
+
 # Local experiment photos and report with personal information.
 /exp1/figure/
 /exp1/local/
