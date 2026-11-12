@@ -1,0 +1,28 @@
+
+
+<SW3>
+display mac-address
+
+MAC address table of slot 0:
+
+-------------------------------------------------------------------------------
+
+MAC Address    VLAN/       PEVLAN CEVLAN Port            Type      LSP/LSR-ID
+
+               VSI/SI                                              MAC-Tunnel
+
+-------------------------------------------------------------------------------
+
+0200-0002-0001 1           -      -      Eth0/0/1        dynamic   0/-
+
+-------------------------------------------------------------------------------
+
+Total matching items on slot 0 displayed = 1
+
+
+<SW3>
+display mac-address aging-time
+
+  Aging time: 0 seconds
+
+<SW3>

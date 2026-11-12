@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev cx="650.000000" cy="200.000000" edit_left="677" edit_top="254" id="257D50F5-90D3-5CC9-8FA6-BA72398FAC8C" name="SW2" model="S3700" settings="" system_mac="02-00-00-02-01-02" com_port="2121" bootmode="0">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev cx="999.000000" cy="200.000000" edit_left="1026" edit_top="254" id="2D73AD26-A974-555B-A654-24817B1A9EFB" name="SW3" model="S3700" settings="" system_mac="02-00-00-02-01-03" com_port="2122" bootmode="0">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev cx="60.000000" cy="200.000000" edit_left="87" edit_top="254" id="52EC28AE-C410-58D9-8426-B268E30E9023" name="Client1" model="PC" settings=" -simpc_ip 192.0.2.1  -simpc_mask 255.255.255.0  -simpc_gateway 0.0.0.0  -simpc_mac 02-00-00-02-00-01  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="02-00-00-02-00-01" com_port="0" bootmode="1">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+            </slot>
+        </dev>
+        <dev cx="300.000000" cy="450.000000" edit_left="327" edit_top="504" id="A33A925C-8809-5728-9773-A6A66CFA9256" name="Client2" model="PC" settings=" -simpc_ip 192.0.2.2  -simpc_mask 255.255.255.0  -simpc_gateway 0.0.0.0  -simpc_mac 02-00-00-02-00-02  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="02-00-00-02-00-02" com_port="0" bootmode="1">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+            </slot>
+        </dev>
+        <dev cx="650.000000" cy="450.000000" edit_left="677" edit_top="504" id="E346911E-7DFB-5E23-BA63-FA55CC159FB0" name="Client3" model="PC" settings=" -simpc_ip 192.0.2.3  -simpc_mask 255.255.255.0  -simpc_gateway 0.0.0.0  -simpc_mac 02-00-00-02-00-03  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="02-00-00-02-00-03" com_port="0" bootmode="1">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+            </slot>
+        </dev>
+        <dev cx="1000.000000" cy="450.000000" edit_left="1027" edit_top="504" id="6F7481E9-3473-5762-86EA-D37D85C261D6" name="Client4" model="PC" settings=" -simpc_ip 192.0.2.4  -simpc_mask 255.255.255.0  -simpc_gateway 0.0.0.0  -simpc_mac 02-00-00-02-00-04  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="02-00-00-02-00-04" com_port="0" bootmode="1">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+            </slot>
+        </dev>
+        <dev cx="300.000000" cy="200.000000" edit_left="327" edit_top="254" id="5B4DF073-E526-5636-B24F-59F3572B42D1" name="SW1" model="S3700" settings="" system_mac="02-00-00-02-01-01" com_port="2120" bootmode="0">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev cx="1250.000000" cy="200.000000" edit_left="1277" edit_top="254" id="675418B4-4163-558B-8634-9DE91CDCDACD" name="Client5" model="PC" settings=" -simpc_ip 192.0.2.5  -simpc_mask 255.255.255.0  -simpc_gateway 0.0.0.0  -simpc_mac 02-00-00-02-00-05  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="02-00-00-02-00-05" com_port="0" bootmode="1">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="52EC28AE-C410-58D9-8426-B268E30E9023" destDeviceID="5B4DF073-E526-5636-B24F-59F3572B42D1">
+            <interfacePair lineName="Copper" srcIndex="0" tarIndex="0" />
+        </line>
+        <line srcDeviceID="A33A925C-8809-5728-9773-A6A66CFA9256" destDeviceID="5B4DF073-E526-5636-B24F-59F3572B42D1">
+            <interfacePair lineName="Copper" srcIndex="0" tarIndex="2" />
+        </line>
+        <line srcDeviceID="5B4DF073-E526-5636-B24F-59F3572B42D1" destDeviceID="257D50F5-90D3-5CC9-8FA6-BA72398FAC8C">
+            <interfacePair lineName="Copper" srcIndex="1" tarIndex="0" />
+        </line>
+        <line srcDeviceID="E346911E-7DFB-5E23-BA63-FA55CC159FB0" destDeviceID="257D50F5-90D3-5CC9-8FA6-BA72398FAC8C">
+            <interfacePair lineName="Copper" srcIndex="0" tarIndex="2" />
+        </line>
+        <line srcDeviceID="257D50F5-90D3-5CC9-8FA6-BA72398FAC8C" destDeviceID="2D73AD26-A974-555B-A654-24817B1A9EFB">
+            <interfacePair lineName="Copper" srcIndex="1" tarIndex="0" />
+        </line>
+        <line srcDeviceID="6F7481E9-3473-5762-86EA-D37D85C261D6" destDeviceID="2D73AD26-A974-555B-A654-24817B1A9EFB">
+            <interfacePair lineName="Copper" srcIndex="0" tarIndex="2" />
+        </line>
+        <line srcDeviceID="675418B4-4163-558B-8634-9DE91CDCDACD" destDeviceID="2D73AD26-A974-555B-A654-24817B1A9EFB">
+            <interfacePair lineName="Copper" srcIndex="0" tarIndex="1" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips />
+</topo>
