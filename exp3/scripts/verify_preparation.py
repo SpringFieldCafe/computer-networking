@@ -50,6 +50,8 @@ def main():
             result['errors'].append('课程原件哈希发生变化，请保留现状并核查')
     private_paths = ['AGENTS.md', 'exp3/local/records/example.txt', 'exp3/local/topology/example.topo',
                      'exp3/local/evidence/example.json', 'exp3/local/analysis/example.csv',
+                     'exp3/local/runs/example/run.json', 'exp3/local/state/part1-capture-map.json',
+                     'exp3/local/launch/example.json',
                      'exp3/计算机网络实验三.pptx', 'exp3/实验三报告模板.doc', '作业三/privacy-probe.txt']
     ignored = subprocess.run(['git', 'check-ignore', '--stdin'], input=('\n'.join(private_paths)+'\n').encode('utf-8'),
                              cwd=REPO, capture_output=True, check=False, timeout=15)

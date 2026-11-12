@@ -8,9 +8,20 @@ import unittest
 from unittest.mock import patch
 
 import assistant
+import run_project
 
 
 class AssistantTests(unittest.TestCase):
+    def test_automatic_menu_routes_each_project_without_legacy_steps(self):
+        for selection, part in (('7', 'part1'), ('8', 'part2')):
+            with patch('builtins.input', side_effect=[selection, '0']), \
+                    patch.object(run_project, 'main', return_value=0) as run, \
+                    patch.object(assistant.collector, 'collect') as legacy, \
+                    contextlib.redirect_stdout(io.StringIO()):
+                assistant.menu()
+                run.assert_called_once_with([part])
+                legacy.assert_not_called()
+
     def test_evidence_preserves_source_and_unique_archives(self):
         with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
             root = Path(tmp)

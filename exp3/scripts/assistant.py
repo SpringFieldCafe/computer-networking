@@ -94,6 +94,14 @@ def import_evidence(stage, kind, source, label):
 
 
 def status():
+    for part, label in (('part1', '第一个工程'), ('part2', '第二个工程')):
+        runs = sorted((ROOT/'local'/'runs').glob('*-'+part+'/run.json'))
+        if runs:
+            from run_project import STATUS_LABELS
+            record = json.loads(runs[-1].read_text(encoding='utf-8'))
+            mode = '准备检查' if record.get('operation') == 'preflight_only' else '自动运行'
+            state = STATUS_LABELS.get(record['status'], record['status'])
+            print(f'{label}最近一轮{mode}：{state}，自动ping记录{len(record.get("pings", []))}组；{runs[-1].parent}')
     print('以下是理论预期；配置回读、证据文件及通信结果分别记录。')
     for stage, info in STAGES.items():
         pings = ', '.join(f'PC1→{host} {"通" if ok else "不通"}' for host, ok in expected_pc1(stage).items())
@@ -110,12 +118,15 @@ def menu():
     except ValueError as exc:
         print(exc)
     while True:
-        print('\n实验三助手\n1 检查现有工程\n2 查看阶段和记录\n3 配置并回读\n4 只读采集\n5 分析已保存抓包\n6 归档证据\n0 退出')
+        print('\n实验三助手\n7 完成第一个工程\n8 完成第二个工程\n1 检查现有工程\n2 查看阶段和记录\n3 配置并回读（备用）\n4 只读采集（备用）\n5 分析已保存抓包\n6 归档证据\n0 退出')
         choice = input('选择：').strip()
         if choice == '0':
             return
         try:
-            if choice == '1':
+            if choice in ('7', '8'):
+                from run_project import main as run_project
+                run_project(['part1' if choice == '7' else 'part2'])
+            elif choice == '1':
                 check()
             elif choice == '2':
                 status()
@@ -153,6 +164,12 @@ def main(argv=None):
     sub = parser.add_subparsers(dest='action', required=True)
     for action in ('prepare', 'check', 'status', 'menu'):
         sub.add_parser(action)
+    automatic = sub.add_parser('run', help='自动完成一个工程的配置、ping、采集与记录')
+    automatic.add_argument('part', choices=('part1', 'part2'))
+    automatic.add_argument('--bundle', type=Path)
+    automatic.add_argument('--capture-map', type=Path)
+    automatic.add_argument('--check', action='store_true')
+    automatic.add_argument('--plan', action='store_true')
     confirmation = sub.add_parser('confirm-ports', help='记录已确认的 Ethernet 接口名称及依据')
     confirmation.add_argument('--note', required=True)
     evidence = sub.add_parser('evidence')
@@ -170,6 +187,17 @@ def main(argv=None):
             status()
         elif args.action == 'menu':
             menu()
+        elif args.action == 'run':
+            from run_project import main as run_project
+            options = [args.part]
+            for option in ('bundle', 'capture_map'):
+                if getattr(args, option):
+                    options += ['--'+option.replace('_', '-'), str(getattr(args, option))]
+            if args.check:
+                options.append('--check')
+            if args.plan:
+                options.append('--plan')
+            return run_project(options)
         elif args.action == 'confirm-ports':
             confirm_ports(args.note)
         elif args.action == 'evidence':
